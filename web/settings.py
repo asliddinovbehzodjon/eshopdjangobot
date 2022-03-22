@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-3+wq_^fq@#mcw6t^#t7%1c=tz_ieupyw(!4qop#h)9)www85nn
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['46.101.138.237','eshopapi.behzodasliddinov.uz','www.eshopapi.behzodasliddinov.uz']
+ALLOWED_HOSTS = ['*','46.101.138.237','eshopapi.behzodasliddinov.uz','www.eshopapi.behzodasliddinov.uz']
 
 
 # Application definition
@@ -80,14 +80,11 @@ WSGI_APPLICATION = 'web.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'behzod',
-        'USER': 'behzod',
-        'PASSWORD': 'behzod',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
 
 
 # Password validation
